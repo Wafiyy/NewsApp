@@ -18,13 +18,6 @@
         "date": "2022-04-10T14:19:35.741Z",
         "main": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga",
         "html": "<span itemprop='abstract' class='wrap-text page-description'> ReqBin is an online API testing tool for REST and SOAP APIs. Test API endpoints by making API requests directly from your browser. Test API responses with built-in JSON and XML validators. Load test your API with hundreds of simulated concurrent connections. Generate code snippets for API automation testing frameworks. Share and discuss your API requests online. </span>",
-        "id": 5
-    },
-    {
-        "title": "Abror Alisherov",
-        "date": "2022-04-10T14:19:35.741Z",
-        "main": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga",
-        "html": "<span itemprop='abstract' class='wrap-text page-description'> ReqBin is an online API testing tool for REST and SOAP APIs. Test API endpoints by making API requests directly from your browser. Test API responses with built-in JSON and XML validators. Load test your API with hundreds of simulated concurrent connections. Generate code snippets for API automation testing frameworks. Share and discuss your API requests online. </span>",
         "id": 6
     },
     {
