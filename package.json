@@ -1,0 +1,18 @@
+{
+  "name": "newssite",
+  "version": "0.0.1",
+  "description": "news site with ejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "start":"node index.js"
+  },
+  "author": "Abror Alisherov",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}

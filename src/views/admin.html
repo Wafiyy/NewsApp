@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CKEditor</title>
+        <script src="https://cdn.ckeditor.com/4.18.0/full/ckeditor.js"></script>
+        <style> 
+	    input[type=text] {
+	      width: 100%;
+	      padding: 12px 20px;
+	      margin: 8px 0;
+	      box-sizing: border-box;
+	    }
+	    textarea {
+  	    	width: 100%;
+  	    	height: 150px;
+  	    	padding: 12px 20px;
+  	    	box-sizing: border-box;
+  	    	border: 2px solid #ccc;
+  	    	border-radius: 4px;
+  	    	background-color: #f8f8f8;
+  	    	font-size: 16px;
+  	    	resize: none;
+	    }
+	    button{
+	    	width: 100%;
+	    	padding:15px 15px; 
+    	    background:#ccc; 
+    	    border:0 none;
+    	    cursor:pointer;
+    	    --webkit-border-radius: 5px;
+    	    border-radius: 5px;
+    	    font-size: 40px;
+
+	    }
+	</style>
+    </head>
+    <body>
+    	<form id="form">
+        <input id="title" placeholder="Title" type="text" required>
+        <br>
+        <textarea placeholder="Briefly about the topic" id="main" required></textarea>
+        <textarea name="editor1" placeholder="main" required></textarea>
+        <button id="btn">submit</button>
+    	</form>
+        <script>
+            CKEDITOR.replace( 'editor1' );
+
+            form.onsubmit =async (e) => {
+            	e.preventDefault();
+            	var writer = CKEDITOR.instances.editor1.getData();
+                if(!writer.trim()){
+                	return alert("please write text")
+                }
+                title = title.value.trim()
+                main = main.value.trim()
+                console.log(title,main)
+
+                let response = await fetch("/post",{
+                	method: "POST",
+                	headers:{
+                		"Content-Type":"application/json"
+                	},
+                	body:JSON.stringify({
+                		title,
+                		main,
+                		html: writer
+                	})
+                })
+
+                response = await response.json()
+                console.log(response)
+
+                CKEDITOR.instances.editor1.setData( '', function() { this.updateElement(); } )
+                form.reset()
+            }
+		</script>
+    </body>
+</html>
